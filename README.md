@@ -1,13 +1,8 @@
 # mynbconvert custom template
 
-Sometimes it is necessary to distribute final Jupyter Notebook as html report to non-developers.
-In such report the audience attention will mostly be on generated output and on markdown cells.
-Code cells may be nice to have, but is of secondary value.
-In these use cases it would help to have Show/Hide Code button.
+Sometimes it is necessary to distribute final Jupyter Notebook as html report to non-developers. In such report the audience attention will mostly be on generated output and on markdown cells. Code cells may be nice to have, but is of secondary value. In these use cases it would help to have Show/Hide Code button.
 
-In other cases it is necessary to distribute Jupyter Notebook as html file to serve as a "how-to" template with commands for other people to follow.   
-In these cases attention will be on code and markdown text, and the output nice to have but of secondary value.   
-In this scanario it would help to have Show/Hide Output button.
+In other cases it is necessary to distribute Jupyter Notebook as html file to serve as a "how-to" template with commands for other people to follow. In these cases attention will be on code and markdown text, and the output nice to have but of secondary value. In this scanario it would help to have Show/Hide Output button.
 
 In third use case the html output may serve as a record of what was executed. In this use case it will help to have execution timestamp below code cells, in addition to show/hide code/output buttons.
 
