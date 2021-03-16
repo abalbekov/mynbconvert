@@ -1,7 +1,18 @@
 # mynbconvert custom template
 
-This is nbcovert custom template for saving a Jupyter notebook as html file.   
-The template will:
+Sometimes it is necessary to distribute final Jupyter Notebook as html report to non-developers.
+In such report the audience attention will mostly be on generated output and on markdown cells.
+Code cells may be nice to have, but is of secondary value.
+In these use cases it would help to have Show/Hide Code button.
+
+In other cases it is necessary to distribute Jupyter Notebook as html file to serve as a "how-to" template with commands for other people to follow.   
+In these cases attention will be on code and markdown text, and the output nice to have but of secondary value.   
+In this scanario it would help to have Show/Hide Output button.
+
+In third use case the html output may serve as a record of what was executed. In this use case it will help to have execution timestamp below code cells, in addition to show/hide code/output buttons.
+
+This nbcovert custom template serves above use cases by saving a Jupyter notebook as html file.   
+The template will:   
 
 - generate html with "classic" Jupyter look and feel
 - add hide/show buttons for code and output cells
@@ -26,6 +37,27 @@ jupyter nbconvert mynotebook.ipynb \
 Works with nbconvert v6+
 
 To install:
-- copy "custom_template" template directory to <Python-dir>\share\jupyter\nbconvert\templates
+- copy "custom_template" template directory to <Python-dir>\share\jupyter\nbconvert\templates\
+This will copy two files: `conf.json` and `index.html.j2`    
+Resulting directory tree will look like:
+```
+%Your-Python-Home%/
+└── share/
+    └── jupyter/
+        └── nbconvert/
+            └── templates/
+                ├── add-show-code-button
+                │   ├── conf.json
+                │   └── index.html.j2
+                ├── classic
+                │   └── ...
+               ... <other template subdirectories>
+ ```
 - make "custom_exporter" package directory available to Python (ex. place it in PYTHONPATH)
    
+### References:
+["How to hide code from cells in ipython notebook visualized with nbviewer?"](https://stackoverflow.com/a/47017746)    
+["A Jupyter NBConvert HTML template adding a toggle to hide/show each code cell."](https://gist.github.com/QuentinAndre/75fb32f76720546550f672133969213e)   
+["The templating system of nbconvert 6"](https://blog.jupyter.org/the-templating-system-of-nbconvert-6-47ea781eacd2)   
+["Custom Templates for Jupyter Notebooks with Jinja2"](https://www.datacamp.com/community/tutorials/jinja2-custom-export-templates-jupyter)  
+["nbconvert Documentation Release 6.0.8.dev0"](https://buildmedia.readthedocs.org/media/pdf/nbconvert/latest/nbconvert.pdf)
