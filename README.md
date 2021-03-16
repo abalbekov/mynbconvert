@@ -18,7 +18,7 @@ The template will:
 (I could not make toc2 extension own exporters and templates work with nbconvert v6+, therefore included this functionality as a workaround)
 
 ### Html output example:
-<img src="https://github.com/abalbekov/nbconvert-add-show-code-button/blob/main/examples/recording_Example_of_using_nbconvert_custom_template.gif" alt="Screenshot" width="600"/>
+<img src="https://github.com/abalbekov/mynbconvert/blob/main/examples/recording_Example_of_using_nbconvert_custom_template.gif" alt="Screenshot" width="600"/>
 
 The custom Jinja2 template name is "custom_template".   
 The template extends "classic" html template.   
