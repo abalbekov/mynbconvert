@@ -17,6 +17,15 @@ The template relies on several jinja2 filters implemented as functions in a cust
 The exporter name is "custom_exporter.AddFilters", implemented in Python package "custom_exporter".   
 Therefore nbconvert needs to be called with both "--to" and "--template" parameters :
 
-```jupyter nbconvert mynotebook.ipynb --to=custom_exporter.AddFilters --template custom_template```
+```
+jupyter nbconvert mynotebook.ipynb \
+   --to=custom_exporter.AddFilters \
+   --template custom_template
+```
 
 Works with nbconvert v6+
+
+To install:
+- copy "custom_template" template directory to <Python-dir>\share\jupyter\nbconvert\templates
+- make "custom_exporter" package directory available to Python (ex. place it in PYTHONPATH)
+   
