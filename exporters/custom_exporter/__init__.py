@@ -114,8 +114,11 @@ class AddFilters(HTMLExporter):
         Parameter: m: regex match object
         """
         fname = m.group(2)
-        with open(fname, 'rb') as f:
-            data = f.read()
+        try:
+            with open(fname, 'rb') as f:
+                data = f.read()
+        except IOError as error:
+            data=b''
             
         b64_data = base64.b64encode(data).decode("utf-8")
         return f'{m.group(1)}data:image/png;base64,{b64_data}{m.group(3)}'
